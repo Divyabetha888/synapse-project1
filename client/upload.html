@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload | Synapse</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        Synapse
+    </div>
+
+    <button class="nav-btn" onclick="location.href='index.html'">
+        Home
+    </button>
+
+</nav>
+
+
+<section class="upload-section">
+
+    <h1 class="upload-title">
+        Upload Your Knowledge
+    </h1>
+
+    <p class="upload-description">
+        Upload PDFs, notes or research papers and let Synapse
+        generate an interactive AI-powered knowledge graph.
+    </p>
+
+    <div class="upload-box" id="uploadBox">
+
+        <div class="upload-icon">
+            📄
+        </div>
+
+        <h2>Drag & Drop PDF Here</h2>
+
+        <p>or</p>
+
+        <input
+            type="file"
+            id="pdfInput"
+            accept=".pdf"
+            hidden
+        >
+
+        <button id="browseBtn">
+            Browse Files
+        </button>
+
+        <p id="fileName"></p>
+
+    </div>
+
+</section>
+
+<script src="js/upload.js"></script>
+
+</body>
+
+</html>

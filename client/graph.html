@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Synapse AI Knowledge Graph</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Synapse
+        </div>
+
+        <div>
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search concept..."
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+            <button
+                class="nav-btn"
+                onclick="location.href='upload.html'"
+                style="margin-left:15px;"
+            >
+                Upload Another PDF
+            </button>
+
+        </div>
+
+    </nav>
+
+    <section style="padding:20px 40px;">
+
+        <h1 style="font-size:36px; margin-bottom:10px;">
+            🧠 Synapse AI Knowledge Graph
+        </h1>
+
+        <p style="color:#9CA3AF; margin-bottom:20px;">
+            Explore concepts extracted automatically from your uploaded PDF.
+        </p>
+
+        <div
+            style="
+            display:inline-block;
+            background:#161b22;
+            padding:12px 20px;
+            border-radius:12px;
+            margin-bottom:20px;
+            "
+        >
+            📚 Concepts:
+            <span
+                id="conceptCount"
+                style="color:#22c7c7;font-weight:bold;"
+            >
+            </span>
+        </div>
+
+    </section>
+
+    <div class="graph-container">
+
+        <div id="network"></div>
+
+        <div id="infoPanel">
+
+            <h2>Knowledge Graph</h2>
+
+            <p>
+                Click any node to view its summary, related concepts,
+                flashcards and quiz.
+            </p>
+
+            <br>
+
+            <button id="flashcardBtn">
+                📘 Generate Flashcards
+            </button>
+
+            <button id="quizBtn">
+                📝 Generate Quiz
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="js/graph.js"></script>
+
+</body>
+
+</html>
